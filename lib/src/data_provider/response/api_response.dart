@@ -1,4 +1,4 @@
-import 'package:http_unit_test/src/model/article.dart';
+import 'package:flutter_bloc_architecture/src/model/article.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'api_response.g.dart';

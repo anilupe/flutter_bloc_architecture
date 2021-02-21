@@ -1,4 +1,4 @@
-package com.nopalsoft.http_unit_test
+package com.nopalsoft.flutter_bloc_architecture
 
 import io.flutter.embedding.android.FlutterActivity
 
