@@ -13,9 +13,9 @@ class Routes {
 
     switch (settings.name) {
       case topNews:
-        return MaterialPageRoute(settings: settings, builder: (context) => NewsScreen.create(context));
+        return MaterialPageRoute(builder: (context) => NewsScreen.create(context));
       case newsDetails:
-        return MaterialPageRoute(settings: settings, builder: (_) => NewsDetailScreen.create(args));
+        return MaterialPageRoute(builder: (_) => NewsDetailScreen.create(args));
     }
     throw Exception('This route does not exists');
   }
