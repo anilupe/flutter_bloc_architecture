@@ -6,10 +6,10 @@ part 'article.g.dart';
 @JsonSerializable()
 class Article extends Equatable {
   late final String title;
-  late final String author;
-  late final String description;
-  late final String urlToImage;
-  late final String content;
+  late final String? author;
+  late final String? description;
+  late final String? urlToImage;
+  late final String? content;
   late final String url;
 
   Article(this.title, this.author);
@@ -19,5 +19,5 @@ class Article extends Equatable {
   Map<String, dynamic> toJson() => _$ArticleToJson(this);
 
   @override
-  List<Object> get props => [title, author];
+  List<Object> get props => [title];
 }

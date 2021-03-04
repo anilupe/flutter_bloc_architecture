@@ -66,7 +66,7 @@ class _ListItem extends StatelessWidget {
             article.urlToImage == null
                 ? Container(color: Colors.red, height: 250)
                 : CachedNetworkImage(
-                    imageUrl: article.urlToImage,
+                    imageUrl: article.urlToImage!,
                     placeholder: (context, url) => CircularProgressIndicator(),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
