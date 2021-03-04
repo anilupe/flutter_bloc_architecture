@@ -4,14 +4,18 @@ import 'package:flutter_bloc_architecture/src/data_provider/news_provider.dart';
 import 'package:flutter_bloc_architecture/src/model/article.dart';
 import 'package:flutter_bloc_architecture/src/repository/news_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-class MockRepo extends Mock implements NewsRepositoryBase {}
+import 'news_cubit_test.mocks.dart';
 
+// class MockRepo extends Mock implements NewsRepositoryBase {}
+
+@GenerateMocks([NewsRepositoryBase])
 void main() {
   group('News Test', () {
-    Article article = Article("Flutter Test", "Yayo", "Tests", null, null, null);
-    MockRepo mockRepo = MockRepo();
+    final article = Article("Tutorial", "Yayo");
+    final mockRepo = MockNewsRepositoryBase();
 
     blocTest<NewsCubit, NewsState>(
       'News will be loaded correctly',
@@ -20,7 +24,7 @@ void main() {
         return NewsCubit(mockRepo);
       },
       act: (cubit) async => cubit.loadTopNews(),
-      expect: [
+      expect: () => [
         NewsLoadingState(),
         NewsLoadCompleteState([article])
       ],
@@ -33,7 +37,7 @@ void main() {
         return NewsCubit(mockRepo);
       },
       act: (cubit) async => cubit.loadTopNews(),
-      expect: [
+      expect: () => [
         NewsLoadingState(),
         NewsErrorState('La api Key no es valida'),
       ],

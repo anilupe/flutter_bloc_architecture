@@ -5,14 +5,14 @@ part 'article.g.dart';
 
 @JsonSerializable()
 class Article extends Equatable {
-  final String title;
-  final String author;
-  final String description;
-  final String urlToImage;
-  final String content;
-  final String url;
+  late final String title;
+  late final String author;
+  late final String description;
+  late final String urlToImage;
+  late final String content;
+  late final String url;
 
-  Article(this.title, this.author, this.description, this.urlToImage, this.content, this.url);
+  Article(this.title, this.author);
 
   factory Article.fromJson(Map<String, dynamic> json) => _$ArticleFromJson(json);
 

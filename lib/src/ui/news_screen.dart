@@ -48,7 +48,10 @@ class NewsScreen extends StatelessWidget {
 class _ListItem extends StatelessWidget {
   final Article article;
 
-  const _ListItem({Key key, this.article}) : super(key: key);
+  const _ListItem({
+    Key? key,
+    required this.article,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

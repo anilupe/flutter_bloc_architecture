@@ -4,35 +4,35 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # https://pub.dev/packages/http
-  http: ^0.12.2
-  # https://pub.dev/packages/cached_network_image
-  flutter_bloc: ^6.1.2
+  http: ^0.13.0
+  # https://pub.dev/packages/flutter_bloc
+  flutter_bloc: ^7.0.0-nullsafety.3
   # https://pub.dev/packages/equatable
-  equatable: ^1.2.6
+  equatable: ^2.0.0
   # https://pub.dev/packages/url_launcher
-  url_launcher: ^5.7.10
+  url_launcher: ^6.0.2
   # https://pub.dev/packages/cached_network_image
-  cached_network_image: ^2.5.0
+  cached_network_image: ^3.0.0-nullsafety
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # https://pub.dev/packages/build_runner
-  build_runner: ^1.11.1
+  build_runner: ^1.11.5
   # https://pub.dev/packages/json_serializable
-  json_serializable: ^3.5.1
+  json_serializable: ^4.0.2
   # https://pub.dev/packages/bloc_test
-  bloc_test: ^7.1.0
+  bloc_test: ^8.0.0-nullsafety.1
   # https://pub.dev/packages/mockito
-  mockito: ^4.1.4
+  mockito: ^5.0.0
 
 
 flutter:

@@ -9,7 +9,7 @@ void main() {
   /// Primer test: Utilizamos el archivo simulado con la respuesta correcta
   test('Top headlines response is correct', () async {
     /// Creamos un 'Mock' provider que siempre va responder el contenido de top_headlines.json
-    final provider = _getProvider('test/top_headlines.json');
+    final provider = _getProvider('test/provider_test/top_headlines.json');
     final articles = await provider.topHeadlines('us');
 
     /// Verificamos que el numero de noticias sea 2 y los autores sean correctos
@@ -21,7 +21,7 @@ void main() {
   /// Segundo test: Utilizamos el archivo simulado con la respuesta incorrecta
   test('Api key missing exception is thrown correctly', () async {
     /// Creamos un 'Mock' provider que siempre va responder el contenido de api_key_missing.json
-    final provider = _getProvider('test/api_key_missing.json');
+    final provider = _getProvider('test/provider_test/api_key_missing.json');
 
     /// Esta api debe lanzar una excepción. Verificamos que la excepcion sea la esperada
     expect(provider.topHeadlines('mx'), throwsA(predicate((exception) => exception is MissingApiKeyException)));
@@ -30,7 +30,7 @@ void main() {
   /// Tercer test: Utilizamos el archivo simulado con la respuesta incorrecta
   test('Invalid Api key exception is thrown correctly', () async {
     /// Creamos un 'Mock' provider que siempre va responder el contenido de api_key_invalid.json
-    final provider = _getProvider('test/api_key_invalid.json');
+    final provider = _getProvider('test/provider_test/api_key_invalid.json');
 
     /// Esta api debe lanzar una excepción. Verificamos que la excepcion sea la esperada
     expect(provider.topHeadlines('mx'), throwsA(predicate((exception) => exception is ApiKeyInvalidException)));

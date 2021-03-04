@@ -5,11 +5,11 @@ import 'package:flutter_bloc_architecture/src/model/article.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsDetailScreen extends StatelessWidget {
-  static Widget create(Article article) => NewsDetailScreen(article: article);
+  static Widget create(Object article) => NewsDetailScreen(article: article as Article);
 
   final Article article;
 
-  const NewsDetailScreen({Key key, this.article}) : super(key: key);
+  const NewsDetailScreen({Key? key, required this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

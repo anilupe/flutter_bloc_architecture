@@ -1,6 +1,6 @@
 # Flutter Example: Unit testing [http](https://pub.dev/packages/http) requests
 
-Flutter Version: Stable 1.22.6
+Flutter Version: Stable 2.0.0
 
 In this example we are going to create an app using [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 
@@ -20,7 +20,7 @@ In this example we are going to create an app using [Flutter Bloc](https://pub.d
     static const String _apiKey = 'Change to your own api key';
   ````
 
-- Run the command `pub run build_runner watch --delete-conflicting-outputs` to generate the code.
+- Run the command `flutter pub run build_runner watch --delete-conflicting-outputs` to generate the code.
 
 # Screenshots
 
