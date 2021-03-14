@@ -15,7 +15,7 @@ class NewsDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top news'),
+        title: Text('News Details'),
       ),
       body: Column(
         children: [

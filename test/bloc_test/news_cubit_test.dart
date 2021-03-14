@@ -9,12 +9,10 @@ import 'package:mockito/mockito.dart';
 
 import 'news_cubit_test.mocks.dart';
 
-// class MockRepo extends Mock implements NewsRepositoryBase {}
-
 @GenerateMocks([NewsRepositoryBase])
 void main() {
   group('News Test', () {
-    final article = Article("Tutorial", "Yayo");
+    final article = Article(title: "Tutorial", author: "Yayo");
     final mockRepo = MockNewsRepositoryBase();
 
     blocTest<NewsCubit, NewsState>(
