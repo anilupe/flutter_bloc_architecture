@@ -22,7 +22,7 @@ void main() {
   });
 
   testWidgets('News screens load correctly', (WidgetTester tester) async {
-    // Inject the cubit to test
+
     await tester.pumpWidget(
       RepositoryProvider<NewsRepositoryBase>(
         create: (context) => mockRepo,
@@ -39,7 +39,7 @@ void main() {
   });
 
   testWidgets('Navigate to details correctly', (WidgetTester tester) async {
-    // Inject the cubit to test
+
     await tester.pumpWidget(
       RepositoryProvider<NewsRepositoryBase>(
         create: (context) => mockRepo,
@@ -58,6 +58,5 @@ void main() {
     expect(find.text('News Details'), findsOneWidget);
     expect(find.text('Tutorial 1'), findsOneWidget);
     expect(find.text('Ver mas'), findsOneWidget);
-
   });
 }
