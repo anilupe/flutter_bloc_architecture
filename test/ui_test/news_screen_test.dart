@@ -22,12 +22,12 @@ void main() {
   });
 
   testWidgets('News screens load correctly', (WidgetTester tester) async {
-
     await tester.pumpWidget(
       RepositoryProvider<NewsRepositoryBase>(
         create: (context) => mockRepo,
         child: MaterialApp(
-            home: Builder(builder: (context) => NewsScreen.create(context))),
+          onGenerateRoute: (settings) => Routes.routes(settings),
+        ),
       ),
     );
 
@@ -39,13 +39,12 @@ void main() {
   });
 
   testWidgets('Navigate to details correctly', (WidgetTester tester) async {
-
     await tester.pumpWidget(
       RepositoryProvider<NewsRepositoryBase>(
         create: (context) => mockRepo,
         child: MaterialApp(
-            onGenerateRoute: (settings) => Routes.routes(settings),
-            home: Builder(builder: (context) => NewsScreen.create(context))),
+          onGenerateRoute: (settings) => Routes.routes(settings),
+        ),
       ),
     );
 
