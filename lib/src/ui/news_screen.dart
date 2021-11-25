@@ -61,8 +61,6 @@ class _ListItem extends StatelessWidget {
         margin: EdgeInsets.all(8),
         child: Column(
           children: [
-            /// Si existe imagen cargamos la imagen con CachedNetworkImage de lo contrario
-            /// mostramos un contenedor con fondo rojo
             article.urlToImage == null
                 ? Container(color: Colors.red, height: 250)
                 : CachedNetworkImage(

@@ -11,6 +11,8 @@ import 'news_cubit_test.mocks.dart';
 
 @GenerateMocks([NewsRepositoryBase])
 void main() {
+
+
   group('News Test', () {
     final article = Article(title: "Tutorial", author: "Yayo");
     final mockRepo = MockNewsRepositoryBase();
